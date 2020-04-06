@@ -26,7 +26,8 @@ const initialBlogs = [
     title: 'First class tests',
     author: 'Robert C. Martin',
     url: 'http://blog.cleancoder.com/uncle-bob/2017/05/05/TestDefinitions.htmll',
-    likes: 10, __v: 0
+    likes: 10
+    , __v: 0
   },
   {
     _id: '5a422ba71b54a676234d17fb',
@@ -53,11 +54,17 @@ const oneBlog = [{
   likes: 5,
 }]
 
+const testUser = {
+  username: 'Testi',
+  name: 'Testi Testi',
+  password: 'sekret'
+}
+
 const blogsInDb = async () => {
   const blogs = await Blog.find({})
   return blogs.map(blog => blog.toJSON())
 }
 
 module.exports = {
-  initialBlogs, oneBlog, blogsInDb
+  initialBlogs, oneBlog, blogsInDb, testUser
 }

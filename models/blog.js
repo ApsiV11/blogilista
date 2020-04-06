@@ -4,14 +4,18 @@ mongoose.set('useFindAndModify', false)
 
 
 const blogSchema = mongoose.Schema({
+  url: {
+    type: String,
+    required: true
+  },
   title: {
     type: String,
     required: true
   },
   author: String,
-  url: {
-    type: String,
-    required: true
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
   },
   likes: Number
 })

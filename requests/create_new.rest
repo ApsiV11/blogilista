@@ -1,9 +1,11 @@
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlV1c2kga8OkeXR0w6Rqw6QiLCJpZCI6IjVlOGIyNzM4OWEwY2M3NDg0Y2UzMTgwYSIsImlhdCI6MTU4NjE3Nzg2N30.RIsEzu77LGjOtNMjU2p4bne0aqaAA9CfDKSkARcvYPk
 
 {
-    "title": "My blog 2",
+    "title": "Testi blogi",
     "author": "Aapo Laakkio",
-    "url": "localhost",
+    "url": "localhost/api/blogs",
     "likes": 100
 }
+
